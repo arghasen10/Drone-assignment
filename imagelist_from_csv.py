@@ -56,7 +56,7 @@ def main():
 
     #Initializing the new csv file
     line = ['asset_name','longitude','latitude','image_names']
-    with open('new.csv','w',newline='') as csvfile:
+    with open('imagelist_assets.csv','w',newline='') as csvfile:
         my_file = csv.writer(csvfile)
         my_file.writerow(line)
 
@@ -69,7 +69,7 @@ def main():
                 list.append(images[j][0])
         #Pushing the list of images and other parameters in the csv file
         row = [a[i][0],a[i][1], a[i][2], list]
-        with open('new.csv', 'a', newline='') as csvfile:
+        with open('imagelist_assets.csv', 'a', newline='') as csvfile:
             my_file = csv.writer(csvfile)
             my_file.writerow(row)
 
